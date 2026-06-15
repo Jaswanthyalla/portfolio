@@ -1,7 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { Github, Linkedin, Instagram, MessageCircle, Mail } from 'lucide-react';
 
 export default function Footer() {
   const scrollTo = (id: string) => {
@@ -9,65 +8,63 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative border-t border-white/[0.05]">
-      <div className="container-width px-6 md:px-12 lg:px-24 py-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <div
-              className="w-8 h-8 rounded-lg flex items-center justify-center text-white font-bold text-xs"
-              style={{ background: 'linear-gradient(135deg, #00BFFF, #007BFF)' }}
+    <footer className="relative py-16 mt-12 border-t border-white/[0.05]">
+      <div className="container-width px-6 flex flex-col items-center text-center gap-8">
+        
+        {/* Name */}
+        <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wider text-[#007BFF]"
+            style={{ textShadow: '0 0 20px rgba(0, 123, 255, 0.4)' }}>
+          Jaswanth Yalla
+        </h2>
+
+        {/* Links */}
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          {['About', 'Skills', 'Experience', 'Projects', 'Certifications', 'Contact'].map(link => (
+            <button
+              key={link}
+              onClick={() => scrollTo(link.toLowerCase())}
+              className="text-white/90 hover:text-[#00BFFF] transition-colors font-medium text-sm md:text-base"
             >
-              JY
-            </div>
-            <div>
-              <div className="font-semibold text-white text-sm">Jaswanth Yalla</div>
-              <div className="text-white/30 text-xs">AI & Data Science Engineer</div>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-1 text-white/30 text-xs">
-            <span>Built with</span>
-            <Heart size={10} className="text-red-400 mx-0.5" />
-            <span>using Next.js, Three.js & Framer Motion</span>
-          </div>
-
-          <div className="flex items-center gap-3">
-            {[
-              { icon: Github, href: 'https://github.com/Jaswanthyalla', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com/in/jaswanth-yalla', label: 'LinkedIn' },
-              { icon: Mail, href: 'mailto:Jaswanthyalla123@gmail.com', label: 'Email' },
-            ].map(({ icon: Icon, href, label }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={label}
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-white/40 hover:text-white transition-all hover:scale-110"
-                style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}
-              >
-                <Icon size={15} />
-              </a>
-            ))}
-          </div>
+              {link}
+            </button>
+          ))}
         </div>
 
-        <div className="mt-8 pt-6 border-t border-white/[0.04] flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-white/20 text-xs">
-            © 2026 Jaswanth Yalla. All rights reserved.
-          </p>
-          <div className="flex items-center gap-4">
-            {['Home', 'About', 'Skills', 'Projects', 'Contact'].map(link => (
-              <button
-                key={link}
-                onClick={() => scrollTo(link.toLowerCase())}
-                className="text-white/25 hover:text-white/60 text-xs transition-colors"
-              >
-                {link}
-              </button>
-            ))}
-          </div>
+        {/* Social Icons */}
+        <div className="flex items-center justify-center gap-4">
+          {[
+            { icon: Github, href: 'https://github.com/Jaswanthyalla', label: 'GitHub' },
+            { icon: Linkedin, href: 'https://linkedin.com/in/jaswanth-yalla', label: 'LinkedIn' },
+            { icon: Instagram, href: '#', label: 'Instagram' },
+            { icon: MessageCircle, href: '#', label: 'WhatsApp' },
+            { icon: Mail, href: 'mailto:Jaswanthyalla123@gmail.com', label: 'Email' },
+          ].map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={label}
+              className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center text-[#007BFF] transition-all duration-300 hover:scale-110"
+              style={{ border: '2px solid #007BFF', boxShadow: '0 0 15px rgba(0, 123, 255, 0.15)' }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = '#007BFF';
+                e.currentTarget.style.color = '#fff';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#007BFF';
+              }}
+            >
+              <Icon size={20} />
+            </a>
+          ))}
         </div>
+
+        {/* Copyright */}
+        <p className="text-white/80 text-sm md:text-base mt-2">
+          © 2025-2026 Made with <span className="text-red-500 mx-1">❤️</span>. All rights reserved.
+        </p>
       </div>
     </footer>
   );
