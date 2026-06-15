@@ -228,11 +228,11 @@ function ProjectCard({ project, index, inView }: {
         className="card-glass cursor-pointer relative overflow-hidden group"
         style={{
           transform: hovered
-            ? 'perspective(1000px) rotateX(-2deg) rotateY(2deg) translateY(-8px)'
-            : 'perspective(1000px) rotateX(0) rotateY(0) translateY(0)',
-          transition: 'transform 0.4s cubic-bezier(0.22, 1, 0.36, 1)',
+            ? 'perspective(1000px) rotateX(-5deg) rotateY(5deg) translateY(-25px) scale(1.02)'
+            : 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)',
+          transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
           border: hovered ? `1px solid ${project.color}50` : '1px solid rgba(255,255,255,0.06)',
-          boxShadow: hovered ? `0 20px 60px ${project.color}20, 0 0 30px ${project.color}10` : 'none',
+          boxShadow: hovered ? `0 30px 60px ${project.color}30, 0 0 40px ${project.color}20` : 'none',
         }}
       >
         {/* Gradient overlay on hover */}

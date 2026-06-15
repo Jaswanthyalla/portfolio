@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowUp } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -159,6 +159,26 @@ export default function Navigation() {
               </div>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Back to top button */}
+      <AnimatePresence>
+        {scrolled && (
+          <motion.button
+            initial={{ opacity: 0, scale: 0.5, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.5, y: 20 }}
+            onClick={() => scrollTo('#home')}
+            className="fixed bottom-6 right-6 z-[60] p-3 rounded-full text-white shadow-lg transition-all hover:scale-110 flex items-center justify-center"
+            style={{
+              background: 'linear-gradient(135deg, #00BFFF, #007BFF)',
+              boxShadow: '0 4px 20px rgba(0, 191, 255, 0.4)'
+            }}
+            aria-label="Back to home"
+          >
+            <ArrowUp size={24} />
+          </motion.button>
         )}
       </AnimatePresence>
     </>

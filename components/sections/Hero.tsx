@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowDown, Download, Github, Linkedin, Mail, Terminal } from 'lucide-react';
+import Image from 'next/image';
 
 const roles = [
   'AI & ML Engineer',
@@ -230,10 +231,13 @@ export default function Hero() {
               {/* Avatar placeholder */}
               <div className="absolute inset-4 rounded-full overflow-hidden bg-gradient-to-br from-[#00BFFF]/20 to-[#00FFB3]/20 flex items-center justify-center"
                 style={{ border: '1px solid rgba(0,191,255,0.3)' }}>
-                <div className="text-center">
-                  <div className="text-7xl font-bold gradient-text-mixed">JY</div>
-                  <div className="text-white/40 text-xs mt-1">AI Engineer</div>
-                </div>
+                {/* Replace 'profile.jpg' with your actual image filename once you add it to the public folder */}
+                <Image 
+                  src="/profile.jpg" 
+                  alt="Jaswanth Yalla" 
+                  fill
+                  className="object-cover"
+                />
               </div>
 
               {/* Floating tech badges */}
