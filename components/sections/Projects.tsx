@@ -221,16 +221,19 @@ function ProjectCard({ project, index, inView }: {
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
-        transition={{ duration: 0.7, delay: index * 0.15 }}
+        whileHover={{ 
+          y: -25, 
+          scale: 1.02, 
+          rotateX: -5, 
+          rotateY: 5 
+        }}
+        transition={{ duration: 0.5, type: "spring", stiffness: 300, damping: 20 }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         onClick={() => setModalOpen(true)}
         className="card-glass cursor-pointer relative overflow-hidden group"
         style={{
-          transform: hovered
-            ? 'perspective(1000px) rotateX(-5deg) rotateY(5deg) translateY(-25px) scale(1.02)'
-            : 'perspective(1000px) rotateX(0) rotateY(0) translateY(0) scale(1)',
-          transition: 'transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
+          perspective: 1000,
           border: hovered ? `1px solid ${project.color}50` : '1px solid rgba(255,255,255,0.06)',
           boxShadow: hovered ? `0 30px 60px ${project.color}30, 0 0 40px ${project.color}20` : 'none',
         }}
