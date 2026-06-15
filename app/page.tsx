@@ -7,6 +7,7 @@ import Experience from '@/components/sections/Experience';
 import Certifications from '@/components/sections/Certifications';
 import Contact from '@/components/sections/Contact';
 import Footer from '@/components/Footer';
+import WelcomeToast from '@/components/WelcomeToast';
 
 const BackgroundEffects = dynamic(() => import('@/components/BackgroundEffects'), { ssr: false });
 const Projects = dynamic(() => import('@/components/sections/Projects'), { ssr: false });
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-[#0A0A0A] overflow-x-hidden">
       <BackgroundEffects />
+      <WelcomeToast />
       <div className="relative z-10">
         <Navigation />
         <Hero />

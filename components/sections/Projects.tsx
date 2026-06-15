@@ -291,7 +291,7 @@ function ProjectCard({ project, index, inView }: {
         <div className="flex items-center justify-between pt-4 border-t border-white/[0.05]">
           <span className="text-xs text-white/30 flex items-center gap-1.5">
             <Code2 size={12} />
-            Click to explore in 3D
+            Click to explore 
           </span>
           <div
             className="w-7 h-7 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:scale-110"
