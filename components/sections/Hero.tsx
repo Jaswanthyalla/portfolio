@@ -233,7 +233,7 @@ export default function Hero() {
                 style={{ border: '1px solid rgba(0,191,255,0.3)' }}>
                 {/* Replace 'profile.jpg' with your actual image filename once you add it to the public folder */}
                 <Image 
-                  src="/profile.jpg" 
+                  src="/pic.png.jpg" 
                   alt="Jaswanth Yalla" 
                   fill
                   className="object-cover"
