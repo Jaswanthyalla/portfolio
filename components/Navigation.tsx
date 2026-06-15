@@ -170,7 +170,7 @@ export default function Navigation() {
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5, y: 20 }}
             onClick={() => scrollTo('#home')}
-            className="fixed bottom-6 right-6 z-[60] p-3 rounded-full text-white shadow-lg transition-all hover:scale-110 flex items-center justify-center"
+            className="fixed top-24 left-4 md:top-auto md:left-auto md:bottom-6 md:right-6 z-[60] p-3 rounded-full text-white shadow-lg transition-all hover:scale-110 flex items-center justify-center"
             style={{
               background: 'linear-gradient(135deg, #00BFFF, #007BFF)',
               boxShadow: '0 4px 20px rgba(0, 191, 255, 0.4)'
