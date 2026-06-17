@@ -9,7 +9,7 @@ const educationData = [
     degree: 'B.Tech – Artificial Intelligence & Data Science',
     institution: 'SRKR Engineering College',
     score: 'CGPA: 8.6 (up to V semester)',
-    year: '2022 – Present',
+    year: '2023 – Present',
     icon: GraduationCap,
     color: '#00BFFF',
   },

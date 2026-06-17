@@ -1,6 +1,6 @@
 'use client';
 
-import { Github, Linkedin, Instagram, MessageCircle, Mail } from 'lucide-react';
+import { Github, Linkedin, MessageCircle, Mail } from 'lucide-react';
 
 export default function Footer() {
   const scrollTo = (id: string) => {
@@ -35,7 +35,6 @@ export default function Footer() {
           {[
             { icon: Github, href: 'https://github.com/Jaswanthyalla', label: 'GitHub' },
             { icon: Linkedin, href: 'https://linkedin.com/in/jaswanth-yalla', label: 'LinkedIn' },
-            { icon: Instagram, href: '#', label: 'Instagram' },
             { icon: MessageCircle, href: '#', label: 'WhatsApp' },
             { icon: Mail, href: 'mailto:Jaswanthyalla123@gmail.com', label: 'Email' },
           ].map(({ icon: Icon, href, label }) => (
