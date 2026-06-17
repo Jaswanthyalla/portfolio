@@ -8,10 +8,7 @@ import Image from 'next/image';
 const roles = [
   'AI & ML Engineer',
   'Python Developer',
-  'Computer Vision Engineer',
-  'Data Scientist',
   'Backend Developer',
-  'Full Stack Developer',
 ];
 
 function TypingText({ texts }: { texts: string[] }) {
@@ -179,7 +176,7 @@ export default function Hero() {
             >
               {[
                 { icon: Github, href: 'https://github.com/Jaswanthyalla', label: 'GitHub' },
-                { icon: Linkedin, href: 'https://linkedin.com/in/jaswanth-yalla', label: 'LinkedIn' },
+                { icon: Linkedin, href: 'https://linkedin.comin/jaswanth-yalla-305538281', label: 'LinkedIn' },
                 { icon: Mail, href: 'mailto:Jaswanthyalla123@gmail.com', label: 'Email' },
               ].map(({ icon: Icon, href, label }) => (
                 <a
@@ -231,13 +228,17 @@ export default function Hero() {
               {/* Avatar placeholder */}
               <div className="absolute inset-4 rounded-full overflow-hidden bg-gradient-to-br from-[#00BFFF]/20 to-[#00FFB3]/20 flex items-center justify-center"
                 style={{ border: '1px solid rgba(0,191,255,0.3)' }}>
-                {/* Replace 'profile.jpg' with your actual image filename once you add it to the public folder */}
-                <Image 
-                  src="/pic.png.jpg" 
+                {/* 
+                  To add your image:
+                  1. Place your image file (e.g., 'profile.jpg') in the 'project/public' folder.
+                  2. Uncomment the Image component below and update the 'src' attribute.
+                */}
+                {/* <Image 
+                  src="/profile.jpg"
                   alt="Jaswanth Yalla" 
                   fill
                   className="object-cover"
-                />
+                /> */}
               </div>
 
               {/* Floating tech badges */}

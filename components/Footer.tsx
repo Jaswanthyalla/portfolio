@@ -63,7 +63,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-white/80 text-sm md:text-base mt-2">
-          © 2025-2026 Made with <span className="text-red-500 mx-1">❤️</span>. All rights reserved.
+          © 2023-2027 Made with <span className="text-red-500 mx-1">❤️</span>. All rights reserved.
         </p>
       </div>
     </footer>
